@@ -241,7 +241,8 @@ function CreateHB($name, $table_name)
 function ApiData()
 {
     $query = urlencode('v=0&filt=3&m=1');
-    $ch    = curl_init('http://pc-74e6e2dcb260.main.ane.int/digtrace/answers.php?' . $query);
+    $url = 'Урл по которому делается запрос';
+    $ch    = curl_init($url .'/answers.php?' . $query);
     
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'X-Parse-Application-Id: myApplicationID',
