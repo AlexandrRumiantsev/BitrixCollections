@@ -14,13 +14,13 @@ global $arrFilter;
           Фильтрация новостей инфоблока по параметрам
           - ТИП
           - Заголовок дисертации
-          - ФИО студента
+          - ФИО студента - не точные значения, можно отдельно имя ,фамилию или отчество.
           - Отрасль
           - Дата от и до
           - Диссертационный совет
         */
 				$arrFilter = array(
-						"=NAME" => $_REQUEST["filterDissertations_FILTER"]["NAME"] ,
+						"%NAME" => $_REQUEST["filterDissertations_FILTER"]["NAME"] ,
 						"=PROPERTY_TYPE" => $filter["TYPE"] ,
 						"=PROPERTY_INDUSTRY" => $filter["INDUSTRY"],
 						"=PROPERTY_COUNCIL" => $filter["COUNCIL"],
