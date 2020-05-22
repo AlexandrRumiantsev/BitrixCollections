@@ -25,8 +25,8 @@ global $arrFilter;
 						"=PROPERTY_INDUSTRY" => $filter["INDUSTRY"],
 						"=PROPERTY_COUNCIL" => $filter["COUNCIL"],
 						"=PREVIEW_TEXT" => $filter["TITLE"],
-						">=PROPERTY_DATE_PROTECTION" => date("Y-m-d", $from),
-						"<=PROPERTY_DATE_PROTECTION" => date("Y-m-d", $to),
+						">=PROPERTY_DATE_PROTECTION" => ($from) ? date("Y-m-d", $from) : "",
+						"<=PROPERTY_DATE_PROTECTION" => ($to) ? date("Y-m-d", $to) : "" ,
 				);
 		}
 
