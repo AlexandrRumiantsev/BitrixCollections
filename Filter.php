@@ -1,4 +1,5 @@
-    global $arrFilter;
+<?php 
+global $arrFilter;
 		if($_REQUEST["filterDissertations_FILTER"]["NAME"] ||
 			$filter["TYPE"] != '' || 
 			$_REQUEST["INDUSTRY"] != '' ||
