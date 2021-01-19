@@ -20,12 +20,12 @@
 	}
 	.overlay{
 		position: absolute;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  height: 100%;
-		  z-index: 10;
-		  background-color: rgba(0,0,0,0.5); /*dim the background*/
+		top: 0;
+		left: 0;
+		width: 100%;
+	    height: 100%;
+		z-index: 10;
+		background-color: rgba(0,0,0,0.5); /*dim the background*/
 	}
 	.projects-box button{
 		position:absolute;
@@ -38,3 +38,27 @@
 	.projects-box #edit{
 		left:20%;
 	}
+	.overlay.page{
+		z-index: 11;
+		display:flex;
+		justify-content: center;
+    	align-items: center;
+	}
+	.popupp{
+		position: relative;
+		max-width: 800px;
+	    padding: 100px;
+	    background: white;
+	    border: 1px solid;
+	}
+	.popupp .close_btn{
+		width: 25px;
+	    height: 25px;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	}
+	
+.dz-success-mark , .dz-error-mark{
+	display:none; 
+}

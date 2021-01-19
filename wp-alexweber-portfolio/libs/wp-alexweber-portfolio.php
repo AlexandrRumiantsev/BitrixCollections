@@ -16,13 +16,12 @@ function myplugin_install(){
 }
 
 
-
+function wp_plugins_scripts() {
+    wp_enqueue_script( 'newscript', '/wp-content/plugins/wp-alexweber-portfolio/libs/dropzone.js', array(), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'wp_plugins_scripts' );
 
   //wp_enqueue_script('newscript', '/wp-content/plugins/wp-alexweber-portfolio/libs/dropzone.js');
-
-
-
-
 
 
 
@@ -33,7 +32,6 @@ function wpse_load_plugin_css() {
 }
 
 
-wp_enqueue_script('dropzone', '/wp-content/plugins/wp-alexweber-portfolio/libs/dropzone.js');
 
 
 /*
@@ -75,12 +73,8 @@ function add_my_setting(){
       		  ?><h2><?=$project->name?></h2><?
               $parsed = parse_url( wp_get_attachment_url( $project->fullimg ) );
 			  $url    = dirname( $parsed['path'] ) . '/' . rawurlencode( basename( $parsed['path'] ) );  
-
-              
               ?>
-      			<div id='url'><?=$project->url?></div>
-      			<img alt="<?=$project->name?>" src="<?=$url?>" />
-      			<div style='display:none;' id='data-json'><?=json_encode($project)?></div>
+            	<img alt="<?=$project->name?>" src="<?=$url?>" />
               <?
 			  ?></article><?
           	} 
